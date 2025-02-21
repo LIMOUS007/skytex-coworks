@@ -1,0 +1,57 @@
+body {
+    padding: 0;
+    MARGIN: 0;
+}
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#map {
+    width: 100%;
+    height: 300px;
+}
+/* Navbar Styling */
+.navbar {
+    position: fixed;  /* Ensures it stays at the top */
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);  /* Default black navbar */
+    padding: 0;
+    margin: 0;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    z-index: 1000; /* Ensures it's always on top */
+}
+
+.navbar.transparent {
+    background-color: black; /* Transparent when scrolling */
+}
+
+/* Navbar Brand (Logo) */
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none; /* Removes underline */}
+
+.nav-links {
+    display: flex;
+    gap: 25px;  /* Spaces out the links */
+}
+
+.nav-links a {
+    font-size: 18px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none; /* Removes underline */
+    padding: 8px 12px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f0a500; /* Gold on hover */
+}
+.navbar .container {
+    display: flex;
+    align-items: center;  /* Ensures logo & buttons align vertically */
+    justify-content: space-between;  /* Spreads logo & links evenly */
+    height: 60px;  /* Sets navbar height */
+}
