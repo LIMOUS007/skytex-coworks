@@ -2,9 +2,6 @@ body {
     padding: 0;
     MARGIN: 0;
 }
-.navbar {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
 #map {
     width: 100%;
     height: 300px;
@@ -15,14 +12,29 @@ body {
     top: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0);  /* Default black navbar */
-    padding: 0;
-    margin: 0;
     transition: background-color 0.3s ease, opacity 0.3s ease;
     z-index: 1000; /* Ensures it's always on top */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+
 }
 
 .navbar.transparent {
     background-color: black; /* Transparent when scrolling */
+}
+.navbar .container {
+    display: flex;
+    align-items: center;  /* Ensures logo & buttons align vertically */
+    justify-content: space-between;  /* Spreads logo & links evenly */
+    height: 80px;  /* Sets navbar height */
+    margin: auto;
+}
+
+.navbar-brand img {
+    height: 50px; /* Adjust as needed */
 }
 
 /* Navbar Brand (Logo) */
@@ -30,11 +42,13 @@ body {
     font-size: 24px;
     font-weight: bold;
     color: white;
-    text-decoration: none; /* Removes underline */}
-
+    text-decoration: none; /* Removes underline */
+    margin-right: auto;
+}
 .nav-links {
     display: flex;
     gap: 25px;  /* Spaces out the links */
+
 }
 
 .nav-links a {
@@ -49,9 +63,104 @@ body {
 .nav-links a:hover {
     color: #f0a500; /* Gold on hover */
 }
-.navbar .container {
+
+.custom-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background: #f0a500;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.custom-btn:hover {
+    background: #cf8700;
+}
+
+/* Homepage Background */
+.homepage {
+    height: 100vh;
+    background: url('img/header1.jpg') no-repeat center center/cover;
     display: flex;
-    align-items: center;  /* Ensures logo & buttons align vertically */
-    justify-content: space-between;  /* Spreads logo & links evenly */
-    height: 60px;  /* Sets navbar height */
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Dark Overlay Effect */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Adds a dark overlay for better readability */
+}
+
+/* Homepage Content */
+.homepage-content {
+    position: relative;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    padding: 40px 50px;
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+/* Heading Styles */
+.homepage-content h1 {  
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.homepage-content h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #f0a500; /* Accent color */
+}
+
+.homepage-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 50px 0;
+}
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    gap: px;
+}
+.about-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200;
+}
+.about-content img {
+    width: 50%;
+    border-radius: 10px;
+}
+.about-text {
+    max-width: 600px;
+    text-align: left;
+}
+
+.about-text h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #f0a500; /* Accent color */
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
 }
